@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -28,6 +29,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black flex md:pt-0 pt-12 items-start md:items-center justify-center text-white">
+      <Helmet>
+        <title>Berleezy: The Ball</title>
+        <meta
+          name="description"
+          content="Sign up for exclusive early access to Berleezy: The Ball."
+        />
+        <meta
+          name="keywords"
+          content="Berleezy, The Ball, exclusive, early access"
+        />
+        <meta name="author" content="Berleezy" />
+      </Helmet>
       {submitted ? (
         <div className="text-lg font-bold mt-4">
           Thank you for submitting your email!
