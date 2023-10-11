@@ -17,7 +17,10 @@ export default async function handler(req, res) {
 
       await doc.loadInfo();
       const sheet = doc.sheetsByIndex[0];
-      await sheet.addRow({ Email: req.body.email });
+      await sheet.addRow({
+        Email: req.body.email,
+        Question: req.body.userQuestion,
+      });
 
       res.status(200).json({ success: true });
     } catch (error) {
