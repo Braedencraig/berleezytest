@@ -184,7 +184,7 @@ export default function Home() {
               type="checkbox"
               checked={checked}
               onChange={() => setChecked(!checked)}
-              className="mr-3 sm:mr-2 scale-150 sm:scale-100"
+              className="mr-3 sm:mr-2 scale-150 sm:scale-100 text-md"
               required
             />
             <label className="text-sm">
