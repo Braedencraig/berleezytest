@@ -104,37 +104,39 @@ export default function Home() {
           <div className="text-center max-w-[400px] m-auto">
             <div className="mb-6 max-w-[300px] m-auto border-b border-white pb-2">
               <strong className="text-md mb-6">
-                The Ball (Single Night) ($59.99)
+                The Ball (Single Night) ($99.99)
               </strong>
-              <p className="text-sm mb-2">* Ticket is only for After Party</p>
+              <p className="text-xs mb-2">
+                * Does not include entry to seated show
+              </p>
               <ul className="list-inside text-md  pt-4">
-                <li>- Entry to The Ball on Saturday night</li>
-                <li>- Complimentary drink</li>
+                <li>- Entry to The Ball Afterparty on Saturday Night</li>
+                <li>- Complimentary Drink</li>
               </ul>
             </div>
             <div className="mb-6 max-w-[300px] m-auto border-b border-white pb-2">
-              <strong className="text-md mb-6">The Weekend ($129.99)</strong>
-              <p className="text-sm mb-2">* Limited Quantity</p>
+              <strong className="text-md mb-6">The Weekend ($149.99)</strong>
+              <p className="text-xs mb-2">* Limited Quantity</p>
               <ul className="list-inside text-md  pt-4">
-                <li>- Entry to Friday night mixer @ secret location in DTLA</li>
-                <li>- Entry to Early seated show on Saturday night</li>
-                <li>- Entry to The Ball on Saturday night</li>
-                <li>- Complimentary drink</li>
+                <li>- Entry to Friday Night Mixer @ Secret Location in DTLA</li>
+                <li>- Entry to Early Seated Show on Saturday Night</li>
+                <li>- Entry to The Ball Afterparty on Saturday Night</li>
+                <li>- Complimentary Drink</li>
               </ul>
             </div>
             <div className="mb-6 max-w-[300px] m-auto border-b border-white pb-2">
               <strong className="text-md mb-6">
                 Weekend Premium VIP ($199.99)
               </strong>
-              <p className="text-sm mb-2">* Limited Quantity</p>
+              <p className="text-xs mb-2">* Limited Quantity</p>
               <ul className="list-inside text-md pt-4">
                 <li>
-                  - Q&A, Meet & Greet, Photo Op on Friday night before mixer
+                  - Q&A, Meet & Greet, Photo Op on Friday Night (Pre Mixer)
                 </li>
-                <li>- Entry to Friday night mixer @ secret location in DTLA</li>
-                <li>- Entry to Early seated show on Saturday night</li>
-                <li>- Entry to The Ball on Saturday night</li>
-                <li>- Complimentary drink</li>
+                <li>- Entry to Friday Night Mixer @ Secret Location in DTLA</li>
+                <li>- Entry to Early Seated Show on Saturday Night</li>
+                <li>- Entry to The Ball Afterparty on Saturday Night</li>
+                <li>- Complimentary Drink</li>
               </ul>
             </div>
             <div className="mb-6 flex flex-col">
