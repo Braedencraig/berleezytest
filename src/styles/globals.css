@@ -5,8 +5,8 @@
 .border-image-container {
   background-image: url('/border.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 540px;
+  background-size: cover;
+  width: 560px;
 }
 
 @media (max-width: 768px) {
