@@ -9,11 +9,6 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [checked, setChecked] = useState(false);
   const [userQuestion, setUserQuestion] = useState("");
-  const [isModalOpen, setModalOpen] = useState(true);
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -33,11 +28,6 @@ export default function Home() {
 
     if (response.ok) {
       setSubmitted(true);
-      if (isModalOpen) {
-        setTimeout(() => {
-          closeModal();
-        }, 500);
-      }
     }
   }
 
@@ -46,74 +36,6 @@ export default function Home() {
       style={{ backgroundImage: "url('/bg.png')" }}
       className="min-h-screen bg-cover bg-center flex flex-col pt-12 md:pt-0 items-center justify-start bg-black text-white pb-12"
     >
-      {isModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 border rounded-md">
-          <div
-            className="bg-black bg-opacity-75 absolute w-full h-full"
-            onClick={closeModal}
-          ></div>
-          <div className="relative w-11/12 md:w-2/3 lg:w-1/2 bg-black p-6 rounded-md border border-white z-10">
-            {submitted ? (
-              <div className="text-lg font-bold mt-4">
-                Thank you for submitting your email/question!
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col  p-8 rounded-md w-full"
-              >
-                <div className="mb-6 font-semibold text-lg">
-                  Sign up to know when tickets go on sale first:
-                </div>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="p-2 mb-6 border rounded bg-black placeholder-gray-400"
-                  placeholder="Enter your email"
-                  required
-                />
-                <div className="mb-6 font-semibold text-lg">
-                  Submit your questions if you have any and we’ll get back to
-                  you as quickly as possible
-                </div>
-                <textarea
-                  value={userQuestion}
-                  onChange={(e) => setUserQuestion(e.target.value)}
-                  className="p-2 mb-6 border rounded bg-black placeholder-gray-400"
-                  placeholder="Enter your question"
-                />
-                <div className="mb-6 flex items-baseline">
-                  <input
-                    type="checkbox"
-                    checked={checked}
-                    onChange={() => setChecked(!checked)}
-                    className="mr-3 sm:mr-2 scale-150 sm:scale-100 text-md"
-                    required
-                  />
-                  <label className="text-sm">
-                    I understand that my email will only be used for this
-                    purpose. I also acknowledge that I can have my email removed
-                    at any time.
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="p-2 border text-md border-white text-black bg-white rounded transition duration-300 ease-in-out hover:bg-black hover:text-white"
-                >
-                  Submit
-                </button>
-                <div
-                  className="absolute top-2 right-2 cursor-pointer"
-                  onClick={closeModal}
-                >
-                  <span className="text-white text-xl">×</span>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
