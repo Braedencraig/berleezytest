@@ -33,6 +33,11 @@ export default function Home() {
 
     if (response.ok) {
       setSubmitted(true);
+      if (isModalOpen) {
+        setTimeout(() => {
+          closeModal();
+        }, 500);
+      }
     }
   }
 
