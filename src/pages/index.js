@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Image from "next/image";
 import Head from "next/head"; // to add Google fonts
@@ -9,6 +9,15 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [checked, setChecked] = useState(false);
   const [userQuestion, setUserQuestion] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    setModalOpen(true);
+  }, []);
+
+  function closeModal() {
+    setModalOpen(false);
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -36,6 +45,29 @@ export default function Home() {
       style={{ backgroundImage: "url('/bg.png')" }}
       className="min-h-screen bg-cover bg-center flex flex-col pt-12 md:pt-0 items-center justify-start bg-black text-white pb-12"
     >
+      {isModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-black bg-opacity-70">
+          <div className="relative rounded-lg overflow-hidden w-11/12 md:w-3/4 lg:w-2/3 max-h-full">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 z-10 text-white bg-black py-2 px-4 rounded-full"
+            >
+              &times;
+            </button>
+            <div className="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/cGG9m99Jayc?si=yi4yBU8m5WVEVmEM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
