@@ -87,14 +87,14 @@ export default function Home() {
             December 16th (The Majestic Downtown)
           </div>
           <div className="text-md md:text-lg">Los Angeles, CA</div>
-          {/* <a
-            href="#"
+          <a
+            href="https://www.eventbrite.com/e/berleezy-presents-the-ball-2023-tickets-735997667837?aff=oddtdtcreator"
             target="_blank"
             rel="noopener noreferrer"
-            className="m-4 px-4 py-2 text-md md:text-lg inline-block border border-white text-black bg-white rounded transition duration-300 ease-in-out hover:bg-black hover:text-white pointer-events-none	"
+            className="m-4 px-4 py-2 text-md md:text-lg inline-block border border-white text-black bg-white rounded transition duration-300 ease-in-out hover:bg-black hover:text-white"
           >
             Buy Tickets
-          </a> */}
+          </a>
         </div>
 
         <div className="mt-4 text-center">
