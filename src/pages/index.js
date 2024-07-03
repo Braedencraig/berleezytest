@@ -45,7 +45,7 @@ export default function Home() {
       style={{ backgroundImage: "url('/bg.png')" }}
       className="min-h-screen bg-cover bg-center flex flex-col pt-12 md:pt-0 items-center justify-start bg-black text-white pb-12"
     >
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-black bg-opacity-70">
           <div className="relative rounded-lg overflow-hidden w-11/12 md:w-3/4 lg:w-2/3 max-h-full">
             <button
@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
@@ -112,7 +112,8 @@ export default function Home() {
           objectFit="contain"
         />
       </div>
-      <div className="border-image-container">
+      <div className="text-xxl md:text-3xl font-semibold mt-6">COMING SOON</div>
+      {/* <div className="border-image-container">
         <div className="mt-8 text-center mt-[115px]">
           <div className="text-md md:text-lg font-semibold">
             December 15th (Secret Location) <br />
@@ -175,16 +176,12 @@ export default function Home() {
               <strong className="text-md">
                 Bottle Service Options - Coming Soon.
               </strong>
-              {/* <p className="text-sm mb-6 ">
-                Available on a first come first serve basis to all ticket
-                holders
-              </p> */}
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {submitted ? (
+      {/* {submitted ? (
         <div className="text-lg font-bold mt-4">
           Thank you for submitting your email/question!
         </div>
@@ -234,7 +231,7 @@ export default function Home() {
             Submit
           </button>
         </form>
-      )}
+      )} */}
     </div>
   );
 }
